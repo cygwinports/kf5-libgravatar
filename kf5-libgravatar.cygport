@@ -1,0 +1,24 @@
+inherit kf5
+
+NAME="kf5-libgravatar"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 Gravatar support library"
+DESCRIPTION=
+
+PKG_NAMES="libKF5Gravatar5 libKF5Gravatar-devel"
+libKF5Gravatar5_CONTENTS="
+	etc/xdg/libgravatar.*
+	usr/bin/cygKF5Gravatar-5.dll
+	usr/share/doc/${NAME}
+	usr/share/locale/*/LC_MESSAGES/libgravatar.mo
+"
+libKF5Gravatar_devel_REQUIRES="libKF5Config-devel libQt5Core-devel libQt5Gui-devel"
+libKF5Gravatar_devel_CONTENTS="
+	usr/include/KF5/[Gg]ravatar/
+	usr/include/KF5/gravatar_version.h
+	usr/lib/cmake/KF5Gravatar/
+	usr/lib/libKF5Gravatar.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_Gravatar.pri
+"
